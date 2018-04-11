@@ -70,16 +70,26 @@ bool Math::EqualParity(int x, int y) {
   *
   */
 bool Math::EqualParity(std::vector<int> nums) {
-    int is_pos = 0;
-    int is_neg = 0;
+    int is_even = 0;
+    int is_odd = 0;
     for (int i = 0; i < nums.size(); i++) {
-        if (nums[i] < 0)
-            is_neg++;
+        if (nums[i] % 2 == 0)
+            is_even++;
         else
-            is_pos++;
+            is_odd++;
     }
-    if (is_pos == nums.size() || is_neg == nums.size())
+    if (is_even == nums.size() || is_odd == nums.size())
         return true;
     else
         return false;
 }
+
+
+
+
+
+
+
+
+
+

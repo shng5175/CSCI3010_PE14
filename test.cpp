@@ -49,6 +49,29 @@ TEST_CASE("Get Equal Parity") {
 }
 
 
+TEST_CASE("Get Equal Parity w/ vector") {
+    SECTION("Even vector") {
+        Math even;
+
+        std::vector<int> evens { 2, 4, 6, 8, 10 };
+        REQUIRE(even.EqualParity(evens) == true);
+    }
+
+    SECTION("Odd vector") {
+        Math odd;
+
+        std::vector<int> odds {1, 3, 5, 7 }; 
+        REQUIRE(odd.EqualParity(odds) == true);
+    }
+
+    SECTION("Odd-even vector") {
+        Math odd_even;
+
+        std::vector<int> odd_evens {1, 3, 5, 7, 2 }; 
+        REQUIRE(odd_even.EqualParity(odd_evens) == false);
+    }
+}
+
 
 
 
