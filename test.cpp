@@ -39,7 +39,14 @@ TEST_CASE("Gets correct digit", "[GetDigit]") {
 }
 
 
+TEST_CASE("Get Equal Parity") {
+    Math equal;
 
+    REQUIRE(equal.EqualParity(1, 1) == true);
+    REQUIRE(equal.EqualParity(1, 0) == false);
+    REQUIRE(equal.EqualParity(2, 2) == true);
+    REQUIRE(equal.EqualParity(2, 1) == false); 
+}
 
 
 
