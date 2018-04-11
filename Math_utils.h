@@ -18,4 +18,5 @@ class Math {
 	    bool EqualParity(int x, int y);
 	    bool EqualParity(std::vector<int> nums);
 	    std::vector<int> digits;
+        static double solveQuadratic(int a, int b, int c);
 };
